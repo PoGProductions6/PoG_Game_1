@@ -203,6 +203,7 @@ radius = 16.0
 height = 32.0
 
 [node name="Goblin" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_wfopa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -219,12 +220,16 @@ shape = SubResource("CircleShape2D_eg54i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_box"]
 shape = SubResource("CircleShape2D_qllgg")
 
-[node name="hit_box" type="Area2D" parent="."]
+[node name="enemy_hit_box" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hit_box"]
 shape = SubResource("CapsuleShape2D_wlwy6")
+
+[node name="enemy_hurt_box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hurt_box"]
 
 [connection signal="body_entered" from="detection_box" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="detection_box" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]
-[connection signal="body_exited" from="hit_box" to="." method="_on_hit_box_body_exited"]
+[connection signal="body_entered" from="enemy_hit_box" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_exited" from="enemy_hit_box" to="." method="_on_hit_box_body_exited"]

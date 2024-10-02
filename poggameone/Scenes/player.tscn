@@ -303,3 +303,22 @@ shape = SubResource("RectangleShape2D_24a2a")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="plr_hit_box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plr_hit_box"]
+
+[node name="plr_hurt_box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plr_hurt_box"]
+
+[node name="timers" type="Node" parent="."]
+
+[node name="dash_timer" type="Timer" parent="timers"]
+wait_time = 0.2
+
+[node name="dash_again" type="Timer" parent="timers"]
+wait_time = 0.6
+
+[connection signal="timeout" from="timers/dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="timers/dash_again" to="." method="_on_dash_again_timeout"]
