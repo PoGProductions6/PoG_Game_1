@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 var health=120
 var attack_type:String
 var current_attack:bool
@@ -20,6 +21,7 @@ func get_input():
 	var input_direction=Input.get_vector("left","right","up","down")
 	velocity=input_direction*SPEED
 	
+	
 	#activate dash and start timers
 	if Input.is_action_just_pressed("dash") and can_dash:
 		dashing=true
@@ -39,8 +41,10 @@ func _physics_process(delta: float) -> void:
 	if !current_attack:
 		if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
 			current_attack=true
-		
-	
+			if Input.is_action_just_pressed("left_click"):
+				attack_type="jab"
+			elif Input.is_action_just_pressed("right_click"):
+				attack_type="swing"
 	
 	move_and_slide()
 

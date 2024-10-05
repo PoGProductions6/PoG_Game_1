@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b7adiq5i5r1q4"]
+[gd_scene load_steps=32 format=3 uid="uid://b7adiq5i5r1q4"]
 
 [ext_resource type="Script" path="res://Scripts/goblin.gd" id="1_wfopa"]
 [ext_resource type="Texture2D" uid="uid://d12f2ulely3mi" path="res://Art/placeholder_spritesheets/placeholder16.png" id="2_retb8"]
@@ -198,10 +198,6 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_qllgg"]
 radius = 257.018
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wlwy6"]
-radius = 16.0
-height = 32.0
-
 [node name="Goblin" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_wfopa")
@@ -220,16 +216,5 @@ shape = SubResource("CircleShape2D_eg54i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_box"]
 shape = SubResource("CircleShape2D_qllgg")
 
-[node name="enemy_hit_box" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hit_box"]
-shape = SubResource("CapsuleShape2D_wlwy6")
-
-[node name="enemy_hurt_box" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hurt_box"]
-
 [connection signal="body_entered" from="detection_box" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="detection_box" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="enemy_hit_box" to="." method="_on_hit_box_body_entered"]
-[connection signal="body_exited" from="enemy_hit_box" to="." method="_on_hit_box_body_exited"]

@@ -295,7 +295,6 @@ script = ExtResource("1_hxtmu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lfq4w")
 autoplay = "default"
-frame_progress = 0.914023
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_24a2a")
@@ -303,14 +302,6 @@ shape = SubResource("RectangleShape2D_24a2a")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
-
-[node name="plr_hit_box" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plr_hit_box"]
-
-[node name="plr_hurt_box" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plr_hurt_box"]
 
 [node name="timers" type="Node" parent="."]
 
