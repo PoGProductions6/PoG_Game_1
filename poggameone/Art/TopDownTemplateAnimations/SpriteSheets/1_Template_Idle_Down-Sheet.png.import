@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkxj3g6573jf5"
-path="res://.godot/imported/Untitled 10-04-2024 09-29-19.png-39fe4120bf05e20dd2dd2e476d967699.ctex"
+uid="uid://cio670fihemgi"
+path="res://.godot/imported/1_Template_Idle_Down-Sheet.png-5b417fc351909e22641ab31d62f5c940.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Untitled 10-04-2024 09-29-19.png"
-dest_files=["res://.godot/imported/Untitled 10-04-2024 09-29-19.png-39fe4120bf05e20dd2dd2e476d967699.ctex"]
+source_file="res://Art/TopDownTemplateAnimations/SpriteSheets/1_Template_Idle_Down-Sheet.png"
+dest_files=["res://.godot/imported/1_Template_Idle_Down-Sheet.png-5b417fc351909e22641ab31d62f5c940.ctex"]
 
 [params]
 
