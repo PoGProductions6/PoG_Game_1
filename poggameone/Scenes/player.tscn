@@ -650,7 +650,7 @@ script = ExtResource("1_hxtmu")
 sprite_frames = SubResource("SpriteFrames_lfq4w")
 animation = &"dash_right"
 autoplay = "idle_front"
-frame_progress = 0.666976
+frame_progress = 0.427857
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n42ij")
